@@ -8,7 +8,7 @@ namespace CarvedRock.Api.Controllers
     {
         private static readonly string[] Summaries =
         [
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            "Tenzin", "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         ];
 
         private readonly ILogger<WeatherController> _logger;
@@ -25,7 +25,8 @@ namespace CarvedRock.Api.Controllers
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                //Summary = Summaries[Random.Shared.Next(Summaries.Length)]
+                Summary = Summaries[index - 1]
             })
             .ToArray();
         }
