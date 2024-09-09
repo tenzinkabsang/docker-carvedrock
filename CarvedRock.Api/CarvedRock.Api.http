@@ -1,0 +1,10 @@
+@CarvedRock.Api_HostAddress = https://localhost:7248
+
+GET {{CarvedRock.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{CarvedRock.Api_HostAddress}}/products/api/products
+
+###
